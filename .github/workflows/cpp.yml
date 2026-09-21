@@ -48,7 +48,7 @@ jobs:
             method: with-sanitizers
             container: 'ubuntu:22.04'
             os-display-name: 'ubuntu22.04'
-          - os: macos-15-intel
+          - os: macos-14
             task: cpp-tests
             compiler: clang
             method: with-sanitizers
@@ -61,7 +61,7 @@ jobs:
           - os: ubuntu-24.04-ppc64le
             task: cpp-tests
             compiler: gcc
-            container: null
+            container: 'ghcr.io/lightgbm-org/lightgbm-ci:ppc64le-manylinux-2_28'
             os-display-name: 'ubuntu24.04-ppc64le'
           ###########
           # if-else #
